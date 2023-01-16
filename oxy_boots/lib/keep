@@ -1,0 +1,3 @@
+runApp(MaterialApp(
+      home: Onboard(),
+    ));
