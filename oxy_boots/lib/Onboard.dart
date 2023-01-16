@@ -52,7 +52,7 @@ class _OnboardState extends State<Onboard> {
                   controller: _controller,
                   count: 3,
                   effect: WormEffect(
-                      dotHeight: 5,
+                      dotHeight: 4,
                       dotWidth: 30,
                       activeDotColor: Color(0xff5B9EE1)),
                 ),
