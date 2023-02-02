@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget FavShoeCard() {
+Widget FavShoeCard({
+  final String? ShoeName,
+  final String? ShoePrice,
+  final String? ImageName,
+  final Color? ColorChoice1,
+  final Color? ColorChoice2,
+}) {
   return Container(
     child: Padding(
       padding: const EdgeInsets.all(15),
@@ -42,11 +48,11 @@ Widget FavShoeCard() {
                 children: [
                   CircleAvatar(
                     radius: 5,
-                    backgroundColor: Colors.blue,
+                    backgroundColor: ColorChoice2,
                   ),
                   CircleAvatar(
                     radius: 5,
-                    backgroundColor: Colors.black,
+                    backgroundColor: ColorChoice2,
                   ),
                 ],
               )
