@@ -78,10 +78,13 @@ Widget TopRow() {
   );
 }
 
-Widget FavShoeCard(
-    {final String? ShoeName,
-    final String? ShoePrice,
-    final String? ImageName}) {
+Widget FavShoeCard({
+  final String? ShoeName,
+  final String? ShoePrice,
+  final String? ImageName,
+  final Color? ColorChoice1,
+  final Color? ColorChoice2,
+}) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(15),
     child: Container(
@@ -150,14 +153,14 @@ Widget FavShoeCard(
                   children: [
                     CircleAvatar(
                       radius: 5,
-                      backgroundColor: Colors.blue,
+                      backgroundColor: ColorChoice1,
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     CircleAvatar(
                       radius: 5,
-                      backgroundColor: Colors.black,
+                      backgroundColor: ColorChoice2,
                     ),
                   ],
                 )
