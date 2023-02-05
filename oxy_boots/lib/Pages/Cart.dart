@@ -47,7 +47,7 @@ class _CartState extends State<Cart> {
                 ShoeName: 'Nike Air Max',
                 ShoePrice: '\$120',
                 ShoeSize: 'L',
-                ShoeImage: 'placeholder'),
+                ShoeImage: 'NikeD'),
             SizedBox(
               height: 15,
             ),
@@ -76,7 +76,7 @@ class _CartState extends State<Cart> {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: 200,
+                  height: 250,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -104,7 +104,7 @@ class _CartState extends State<Cart> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -123,9 +123,12 @@ class _CartState extends State<Cart> {
                         ),
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 20,
+                      ),
+                      SizedBox(
+                        height: 40,
                         child: Divider(
-                          height: 10,
+                          height: 1,
                           thickness: 1,
                         ),
                       ),
@@ -146,7 +149,7 @@ class _CartState extends State<Cart> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(30),
@@ -197,7 +200,7 @@ Widget CartCard({
   final String? ShoeImage,
 }) {
   return ClipRRect(
-    borderRadius: BorderRadius.circular(15),
+    borderRadius: BorderRadius.circular(30),
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Container(
@@ -242,6 +245,7 @@ Widget CartCard({
                           icon: Icon(
                             Icons.add,
                             size: 15,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -257,12 +261,13 @@ Widget CartCard({
                       ),
                       CircleAvatar(
                         radius: 15,
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.blueAccent,
                         child: IconButton(
                           onPressed: () {},
                           icon: Icon(
                             Icons.remove,
                             size: 15,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -287,6 +292,103 @@ Widget CartCard({
           ),
         ),
       ),
+    ),
+  );
+}
+
+Widget ToltalProducts() {
+  return Container(
+    height: 250,
+    width: double.infinity,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(15),
+    ),
+    child: Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Subtotal',
+                style: TextStyle(fontSize: 17),
+              ),
+              Text(
+                '\$1250.00',
+                style: TextStyle(fontSize: 17),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Shopping',
+                style: TextStyle(fontSize: 17),
+              ),
+              Text(
+                '\$450.99',
+                style: TextStyle(fontSize: 17),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          height: 40,
+          child: Divider(
+            height: 1,
+            thickness: 1,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Total Costs',
+                style: TextStyle(fontSize: 17),
+              ),
+              Text(
+                '\$1700.99',
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(30),
+          child: MaterialButton(
+            color: Color(0xff5B9EE1),
+            onPressed: () {},
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 15, horizontal: 100),
+              child: Text(
+                'Checkout',
+                style: TextStyle(fontSize: 22, color: Colors.white),
+              ),
+            ),
+          ),
+        )
+      ],
     ),
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxy_boots/BestSellers.dart';
 
 Widget textfield(
   Icon icon, {
@@ -67,9 +68,18 @@ Widget ShoeCard({
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset('$ShoeImage'),
-        Text(
-          'BEST SELLER',
-          style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+        GestureDetector(
+          // onTap: () {
+          //   Navigator.of(context as BuildContext).push(
+          //     MaterialPageRoute(builder: (BuildContext context) {
+          //       return BestSellers();
+          //     }),
+          //   );
+          // },
+          child: Text(
+            'BEST SELLER',
+            style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+          ),
         ),
         Text('$Shoetype', style: TextStyle(fontSize: 18, color: Colors.black)),
         Padding(

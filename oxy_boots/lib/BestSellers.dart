@@ -34,7 +34,7 @@ class _BestSellersState extends State<BestSellers> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Icon(Icons.filter),
+                        Icon(Icons.filter_alt),
                         SizedBox(
                           width: 10,
                         ),
@@ -78,9 +78,9 @@ class _BestSellersState extends State<BestSellers> {
                     FavShoeCard(
                         ColorChoice1: Colors.lightBlue,
                         ColorChoice2: Colors.teal,
-                        ShoeName: 'Nike Jordan',
+                        ShoeName: 'Nike Pure Lift',
                         ShoePrice: '59.99',
-                        ImageName: 'NikeJ'),
+                        ImageName: 'NikePL'),
                     FavShoeCard(
                         ColorChoice1: Colors.purpleAccent,
                         ColorChoice2: Colors.pink,
@@ -103,7 +103,7 @@ class _BestSellersState extends State<BestSellers> {
                       ColorChoice2: Colors.lightGreen,
                       ShoeName: 'Nike Drifters',
                       ShoePrice: '40.99',
-                      ImageName: 'NikeJ',
+                      ImageName: 'NikeF',
                     ),
                     FavShoeCard(
                         ColorChoice1: Colors.orangeAccent,
@@ -125,9 +125,9 @@ class _BestSellersState extends State<BestSellers> {
                     FavShoeCard(
                         ColorChoice1: Colors.greenAccent,
                         ColorChoice2: Colors.pinkAccent,
-                        ShoeName: 'Nike Jordan',
+                        ShoeName: 'Nike Spliter',
                         ShoePrice: '72.99',
-                        ImageName: 'NikeJ'),
+                        ImageName: 'NikeL'),
                     FavShoeCard(
                         ColorChoice1: Colors.blue,
                         ColorChoice2: Colors.orangeAccent,

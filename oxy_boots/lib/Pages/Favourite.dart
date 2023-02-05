@@ -89,7 +89,7 @@ Widget FavShoeCard({
     borderRadius: BorderRadius.circular(15),
     child: Container(
       color: Colors.white,
-      height: 243,
+      height: 245,
       width: 180,
       child: Padding(
         padding: const EdgeInsets.all(15),
