@@ -74,7 +74,9 @@ class _OnboardState extends State<Onboard> {
                             child: Text(
                               'Get Started',
                               style: TextStyle(
-                                  fontSize: 17, color: Color(0xff707B81)),
+                                fontSize: 17,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -94,8 +96,8 @@ class _OnboardState extends State<Onboard> {
                                 vertical: 15, horizontal: 50),
                             child: Text(
                               'Next',
-                              style: TextStyle(
-                                  fontSize: 17, color: Color(0xff707B81)),
+                              style:
+                                  TextStyle(fontSize: 17, color: Colors.white),
                             ),
                           ),
                         ),

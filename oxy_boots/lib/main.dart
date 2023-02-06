@@ -11,8 +11,8 @@ import 'package:oxy_boots/Onboard.dart';
 
 void main() => runApp(MaterialApp(
       routes: {
-        // '/': (context) => Splash(),
-        '/': (context) => HomePage(),
+        '/': (context) => Splash(),
+        // '/': (context) => HomePage(),
         '/OB': (context) => Onboard(),
         '/LG': (context) => Login(),
         '/SU': (context) => Signup(),
