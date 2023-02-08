@@ -310,47 +310,55 @@ class _CheckoutState extends State<Checkout> {
                         color: Color(0xff5B9EE1),
                         onPressed: () {
                           showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                    content: Stack(
-                                      children: [
-                                        Positioned(
-                                          child: CircleAvatar(
-                                            backgroundColor: Colors.white24,
-                                            radius: 70,
-                                            child: Center(
-                                              child: Image.asset(
-                                                  'images/Congrats.png'),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          bottom: 1.2,
-                                          child: Text(
-                                            'Your Payment Was Successful',
-                                            style: TextStyle(fontSize: 25),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ),
-                                      ],
+                            context: context,
+                            builder: (context) => ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: SimpleDialog(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundColor: Colors.white24,
+                                    radius: 70,
+                                    child: Center(
+                                      child: Image.asset('images/Congrats.png'),
                                     ),
-                                    actions: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(30),
-                                        child: MaterialButton(
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Your Payment Was\nSuccessful',
+                                    style: TextStyle(fontSize: 25),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(45),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 25),
+                                      child: MaterialButton(
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 20),
                                             child: Text(
                                               'Continue Shopping',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             ),
-                                            color: Color(0xff5B9EE1),
-                                            onPressed: () {
-                                              Navigator.pushReplacementNamed(
-                                                  context, '/');
-                                            }),
-                                      )
-                                    ],
-                                  ));
+                                          ),
+                                          color: Color(0xff5B9EE1),
+                                          onPressed: () {
+                                            Navigator.pushReplacementNamed(
+                                                context, '/HP');
+                                          }),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(

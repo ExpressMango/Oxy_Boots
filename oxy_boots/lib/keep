@@ -1,3 +1,46 @@
 runApp(MaterialApp(
       home: Onboard(),
     ));
+
+
+
+    Stack(
+                                      children: [
+                                        Positioned(
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.white24,
+                                            radius: 70,
+                                            child: Center(
+                                              child: Image.asset(
+                                                  'images/Congrats.png'),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 1.2,
+                                          child: Text(
+                                            'Your Payment Was Successful',
+                                            style: TextStyle(fontSize: 25),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    actions: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(30),
+                                        child: MaterialButton(
+                                            child: Text(
+                                              'Continue Shopping',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                            color: Color(0xff5B9EE1),
+                                            onPressed: () {
+                                              Navigator.pushReplacementNamed(
+                                                  context, '/');
+                                            }),
+                                      )
+                                    ],
+                                  ));
+                        },
