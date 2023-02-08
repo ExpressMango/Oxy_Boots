@@ -225,12 +225,148 @@ class _CheckoutState extends State<Checkout> {
               ),
             ),
           ),
-          // Expanded(
-          //   child: Align(
-          //     alignment: Alignment.bottomCenter,
-          //     child: ToltalProducts(),
-          //   ),
-          // ),
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 250,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Subtotal',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            '\$1250.00',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Shopping',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            '\$450.99',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      height: 40,
+                      child: Divider(
+                        height: 1,
+                        thickness: 1,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Total Costs',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            '\$1700.99',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: MaterialButton(
+                        color: Color(0xff5B9EE1),
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                    content: Stack(
+                                      children: [
+                                        Positioned(
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.white24,
+                                            radius: 70,
+                                            child: Center(
+                                              child: Image.asset(
+                                                  'images/Congrats.png'),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 1.2,
+                                          child: Text(
+                                            'Your Payment Was Successful',
+                                            style: TextStyle(fontSize: 25),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    actions: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(30),
+                                        child: MaterialButton(
+                                            child: Text(
+                                              'Continue Shopping',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                            color: Color(0xff5B9EE1),
+                                            onPressed: () {
+                                              Navigator.pushReplacementNamed(
+                                                  context, '/');
+                                            }),
+                                      )
+                                    ],
+                                  ));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 15, horizontal: 100),
+                          child: Text(
+                            'Checkout',
+                            style: TextStyle(fontSize: 22, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
