@@ -20,15 +20,9 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return Checkout();
-                        },
-                      ),
-                    );
-                  },
+                  onTap: (() {
+                    Navigator.pushNamed(context, '/CH');
+                  }),
                   child: Image.asset('images/Menu.png')),
               Column(
                 children: [
@@ -54,7 +48,10 @@ class _HomeState extends State<Home> {
                 ],
               ),
               GestureDetector(
-                  onTap: () {}, child: Image.asset('images/Cart.png'))
+                  onTap: () {
+                    Navigator.pushNamed(context, '/CR');
+                  },
+                  child: Image.asset('images/Cart.png'))
             ],
           ),
           SizedBox(
@@ -103,9 +100,14 @@ class _HomeState extends State<Home> {
                   'Popular Shoes',
                   style: TextStyle(fontSize: 18),
                 ),
-                Text(
-                  'See all',
-                  style: TextStyle(color: Color(0xff5B9EE1)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/BS');
+                  },
+                  child: Text(
+                    'See all',
+                    style: TextStyle(color: Color(0xff5B9EE1)),
+                  ),
                 )
               ],
             ),
@@ -162,9 +164,14 @@ class _HomeState extends State<Home> {
                       ),
                     );
                   },
-                  child: Text(
-                    'See all',
-                    style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/BS');
+                    },
+                    child: Text(
+                      'See all',
+                      style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+                    ),
                   ),
                 ),
               ],

@@ -22,7 +22,9 @@ class _BestSellersState extends State<BestSellers> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(Icons.arrow_back_ios_new_outlined),
                     ),
                     Text(

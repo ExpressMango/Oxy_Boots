@@ -34,8 +34,13 @@ class _CartState extends State<Cart> {
         title: Text('My Cart'),
         leading: CircleAvatar(
           backgroundColor: Colors.white,
-          child: Icon(
-            Icons.arrow_back_ios_new,
+          child: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios_new,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
             color: Colors.black,
           ),
         ),
@@ -155,7 +160,9 @@ class _CartState extends State<Cart> {
                         borderRadius: BorderRadius.circular(30),
                         child: MaterialButton(
                           color: Color(0xff5B9EE1),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/CH');
+                          },
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 100),

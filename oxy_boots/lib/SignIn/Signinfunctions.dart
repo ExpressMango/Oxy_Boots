@@ -76,9 +76,11 @@ Widget ShoeCard({
           //     }),
           //   );
           // },
-          child: Text(
-            'BEST SELLER',
-            style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+          child: GestureDetector(
+            child: Text(
+              'BEST SELLER',
+              style: TextStyle(fontSize: 15, color: Color(0xff5B9EE1)),
+            ),
           ),
         ),
         Text('$Shoetype', style: TextStyle(fontSize: 18, color: Colors.black)),
